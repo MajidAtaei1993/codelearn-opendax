@@ -7,7 +7,7 @@ import { createVuetify } from 'vuetify'
 const LightTheme = {
     dark: false,
     colors: {
-        background: '#FFFFFF',
+        background: '#E1E3E7',
         primary: '#1409A0',
         secondary: '#4C40E6',
         accent: '#00632B',

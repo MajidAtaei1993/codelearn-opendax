@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
+    ssr: false,
     devtools: { enabled: true },
     //...
     build: {
@@ -19,6 +20,11 @@ export default defineNuxtConfig({
         //...
     ],
     vite: {
+        server:{
+            hmr:{
+                port: 3008
+            }
+        },
         vue: {
         template: {
             transformAssetUrls,
