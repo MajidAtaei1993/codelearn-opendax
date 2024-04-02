@@ -14,6 +14,7 @@
             <v-card-text class="px-2">
                 <v-row class="ma-0">
                     <v-col cols="12">
+                        <v-list-subehader>Asset</v-list-subehader>
                         <v-select :items="props.symbols" item-title="name" item-value="id" density="compact" hide-details variant="outlined" v-model="events.symbolSelected">
                             <template v-slot:item="{ props, item }">
                                 <v-list-item class="text-black" v-bind="props" :title="item.title">
@@ -38,21 +39,21 @@
                     </ul>
                     <v-col cols="12">
                         <v-list-subheader>Expiration time 
-                            <v-tooltip :text="events.tooltipText" location="top" max-width="407">
+                            <v-tooltip location="top" max-width="407">
                                 <template v-slot:activator="{ props }">
                                     <v-btn v-bind="props" icon="mdi-progress-question" variant="text" size="small"></v-btn>   
                                 </template>
+                                `Cancelled transactions are finalized only expiration time, before releasig locked funds. You can define the expiration time of your deposite/withrawals on the exchange.<br>
+                                **please use appropritate gas fees. Transactions need to be confirmed before expiration time, otherwise, will be deemed invalid.`
                             </v-tooltip>
                         </v-list-subheader>
-                        <v-radio-group inline class="d-flex justify-space-between w-100" hide-details v-model="events.expirationTime">
-                            <v-radio label="5m" value="5m"></v-radio>
-                            <v-radio label="10m" value="10m"></v-radio>
-                            <v-radio label="30m" value="30m"></v-radio>
-                            <v-radio label="1h" value="1h"></v-radio>
-                        </v-radio-group>
+                        <v-select :items="events.expirationTimes" v-model="events.expirationTime" variant="outlined" hide-details density="compact" />
                     </v-col>
                     <v-col cols="12">
                         <v-btn variant="text" size="small" color="primary" class="text-capitalize">see deposite history</v-btn>
+                        <v-alert density="compact" type="error" icon="mdi-alert" variant="tonal" border="start">
+                            Your wallet network is incorrect. <br> Please make sure its set to `Ethereum Mainnet`
+                        </v-alert>
                     </v-col>
                 </v-row>
             </v-card-text>
@@ -70,7 +71,12 @@
         dialog: false,
         symbolSelected: null,
         expirationTime: null,
-        tooltipText:'Cancelled transactions are finalized only expiration time, before releasig locked funds. You can define the expiration time of your deposite/withrawals on the exchange.\n **please use appropritate gas fees. Transactions need to be confirmed before expiration time, otherwise, will be deemed invalid.'
+        expirationTimes:[
+            { title:'5 minutes', value:'5 minutes' },
+            { title:'10 minutes', value:'10 minutes' },
+            { title:'30 minutes', value:'30 minutes' },
+            { title:'1 hour', value:'1 hour' },
+        ],
     })
 </script>
 

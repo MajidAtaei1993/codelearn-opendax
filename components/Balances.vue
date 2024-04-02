@@ -20,7 +20,7 @@
                     <v-col cols="4">
                         <v-list-item :title="coin.current_price" :subtitle="coin.total_volume" class="px-0"></v-list-item>
                     </v-col>
-                    <v-col cols="4">
+                    <v-col cols="4" class="text-end">
                         <BalancesWithdraw :symbols="props.symbols" />
                         <BalancesDeposite :symbols="props.symbols" />
                     </v-col>

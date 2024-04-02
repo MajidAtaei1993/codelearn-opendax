@@ -48,7 +48,7 @@
                 </template>
             </v-list-item>
         </v-list>
-        <v-btn block size="large" rounded="lg" color="#00632B" class="text-capitalize">buy</v-btn>
+        <v-btn block size="large" rounded="lg" color="error" class="text-capitalize">sell</v-btn>
     </v-row>
 </template>
 

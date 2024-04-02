@@ -2,39 +2,36 @@
     <v-row class="ma-0">
         <v-col cols="12" lg="6">
             <v-card rounded="lg">
-                <v-row class="ma-0">
-                    <v-col cols="12" md="auto">
-                        <v-list-item color="#f7931a" title="BTC/USDT" class="px-0">
-                            <template v-slot:prepend>
-                                <v-icon color="#F7931A" size="50">mdi-bitcoin</v-icon>
-                            </template>
-                        </v-list-item>
+                <v-row class="ma-0" align="center">
+                    <v-col cols="auto" lg="auto" class="d-flex align-center">
+                        <v-icon color="#F7931A" size="45">mdi-bitcoin</v-icon>
+                        <span class="ml-2 text-subtitle-2">BTC/USDT</span>
                     </v-col>
                     <v-divider vertical="" />
-                    <v-col cols="12" md="auto">
-                        <v-list-item>
-                            <v-list-item-title class="text-success text-h5">62,238,00</v-list-item-title>
-                            <v-list-item-subtitle>Last market price</v-list-item-subtitle>
-                        </v-list-item>
+                    <v-col cols="auto" lg="auto" class="">
+                        <ul>
+                            <li class="text-success text-h6">62,238,00</li>
+                            <li class="text-caption">Last market price</li>
+                        </ul>
                     </v-col>
                     <v-divider vertical="" />
-                    <v-col cols="12" md="auto" class="d-flex align-center">
-                        <v-list-item>
-                            <v-list-item-title class="text-success">+1.75%</v-list-item-title>
-                            <v-list-item-subtitle>24h Change</v-list-item-subtitle>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-list-item-title>63,597.80</v-list-item-title>
-                            <v-list-item-subtitle>24h High</v-list-item-subtitle>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-list-item-title>60,322.6</v-list-item-title>
-                            <v-list-item-subtitle>24h Low</v-list-item-subtitle>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-list-item-title>2,548,722,097.16</v-list-item-title>
-                            <v-list-item-subtitle>Market Volume</v-list-item-subtitle>
-                        </v-list-item>
+                    <v-col cols="12" lg="7" sm="8" class="d-flex align-center justify-space-between">
+                        <ul>
+                            <li class="text-success">+1.75%</li>
+                            <li class="text-caption">24h Change</li>
+                        </ul>
+                        <ul>
+                            <li>63,597.80</li>
+                            <li class="text-caption">24h High</li>
+                        </ul>
+                        <ul>
+                            <li>60,322.6</li>
+                            <li class="text-caption">24h Low</li>
+                        </ul>
+                        <ul>
+                            <li>2,548,722,097.16</li>
+                            <li class="text-caption">Market Volume</li>
+                        </ul>
                     </v-col>
                 </v-row>
             </v-card>
@@ -173,5 +170,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+ul{
+    list-style: none;
+}
 </style>

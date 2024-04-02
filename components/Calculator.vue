@@ -5,15 +5,17 @@
         </v-card-title>
         <v-divider />
         <v-card-text>
-            <v-tabs v-model="events.tabs" grow selected-class="active-tab" hide-slider="" class="tab rounded-lg">
-                <v-tab class="text-capitalize">buy</v-tab>
-                <v-tab class="text-capitalize">sell</v-tab>
+            <v-tabs v-model="events.tabs" grow hide-slider="" class="tab rounded-lg">
+                <v-tab class="text-capitalize" :class="events.tabs === 0 ? 'bg-success' : 'bg-transparent'">buy</v-tab>
+                <v-tab class="text-capitalize" :class="events.tabs === 1 ? 'bg-error' : 'bg-transparent'">sell</v-tab>
             </v-tabs>
             <v-window v-model="events.tabs">
                 <v-window-item>
                     <CalcBuy />
                 </v-window-item>
-                <v-window-item>sell</v-window-item>
+                <v-window-item>
+                    <CalcSell />
+                </v-window-item>
             </v-window>
         </v-card-text>
     </v-card>

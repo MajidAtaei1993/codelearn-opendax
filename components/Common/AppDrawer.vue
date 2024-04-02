@@ -5,22 +5,13 @@
                 <img class="logo" src="@/assets/images/Logo.png" alt="" v-if="!events.expandOnHover">
                 <img class="logo-expand" src="@/assets/images/Logo-Expand.png" alt="" v-else>
             </v-list-item>
-            <v-list-group color="primary" v-for="(nav, i) in events.navLinks" :key="i" :subgroup="!nav.child" :gitvalue="nav.text">
-                <template v-slot:activator="{ props }">
-                    <v-list-item v-bind="props" :prepend-icon="nav.icon">
-                        <v-list-item-title>
-                            <span class="nav-text">{{ nav.text }}</span>
-                        </v-list-item-title>
-                    </v-list-item>
-                </template>
-                <v-list-item v-for="(item , j) in nav.child" :key="j">
-                    <v-list-item-title>
-                        <span class="nav-text">
-                            {{ item.text }}
-                        </span>
-                    </v-list-item-title>
-                </v-list-item>
-            </v-list-group>
+            <v-list-item v-for="(nav, i) in events.navLinks" :key="i" :to="{ name: nav.link }" color="primary" :prepend-icon="nav.icon">
+                <v-list-item-title>
+                    <span class="nav-text">
+                        {{ nav.text }}
+                    </span>
+                </v-list-item-title>
+            </v-list-item>
         </v-list>
         <template v-slot:append>
             <v-list nav>
@@ -70,22 +61,10 @@
         drawer: null,
         expandOnHover: true,
         navLinks:[
-            { icon:'mdi-chart-bar', text:'trade', link:'' },
-            { 
-                icon:'mdi-order-bool-ascending', text:'orders',
-                child:[
-                    { icon:'', text:'all', link:'' },
-                    { icon:'', text:'open', link:'' },
-                ]
-            },
-            { 
-                icon:'mdi-history', text:'history',
-                child:[
-                    { icon:'', text:'deposit', link:'' },
-                    { icon:'', text:'withdraw', link:'' },
-                ]
-            },
-            { icon:'mdi-cog', text:'settings', link:'' },
+            { icon:'mdi-chart-bar', text:'trade', link:'index' },
+            { icon:'mdi-order-bool-ascending', text:'orders', link:'orders' },
+            { icon:'mdi-history', text:'history', link:'history' },
+            { icon:'mdi-cog', text:'settings', link:'settings' },
         ],
     })
 </script>
