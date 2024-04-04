@@ -5,32 +5,32 @@ import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 
 const light = {
-    light: true,
-    dark: false,
-    colors: {
-        background: '#E1E3E7',
-        primary: '#1409A0',
-        secondary: '#4C40E6',
-        accent: '#00632B',
-        error: '#B01212',
-        info: '#2196F3',
-        success: '#00632B',
-        warning: '#FB8C00',
-    }
+  light: true,
+  dark: false,
+  colors:{
+      background: "#F8F7FA",
+      primary: "#7367F0",
+      surface: "#FFFFFF",
+      secondary: "#03dac6",
+      error: "#f44336",
+      info: "#2196F3",
+      success: "#4caf50",
+      warning: "#fb8c00",
+  }
 }
 const dark = {
     dark: true,
     light: false,
-    colors: {
-        background: '#474848',
-        primary: '#1409A0',
-        secondary: '#4C40E6',
-        accent: '#00632B',
-        error: '#B01212',
-        info: '#2196F3',
-        success: '#00632B',
-        warning: '#FB8C00',
-    }
+    colors:{
+      background: "#25293C",
+      primary: "#7367F0",
+      surface: "#2F3349",
+      secondary: "#03dac6",
+      error: "#f44336",
+      info: "#2196F3",
+      success: "#4caf50",
+      warning: "#fb8c00",
+  }
 }
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
