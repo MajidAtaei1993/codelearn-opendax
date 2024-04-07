@@ -15,7 +15,7 @@
                         </ul>
                     </v-col>
                     <v-divider vertical="" />
-                    <v-col cols="12" lg="7" sm="8" class="d-flex align-center justify-space-between">
+                    <v-col cols="12" lg="8" md="8" sm="7" class="d-flex flex-wrap align-center justify-space-between">
                         <ul>
                             <li class="text-success">+1.75%</li>
                             <li class="text-caption">24h Change</li>

@@ -54,7 +54,7 @@
 </template>
 
 <script setup>
-    import { ref, reactive } from 'vue'
+    const props = defineProps(['navDrawer'])
 
     // data
     const events = reactive({
@@ -67,6 +67,13 @@
             { icon:'mdi-cog', text:'settings', link:'settings' },
         ],
     })
+
+    watch(
+        () => props.navDrawer,
+        (n, o) => {
+            events.drawer = n
+        }
+    )
 </script>
 
 <style lang="scss" scoped>

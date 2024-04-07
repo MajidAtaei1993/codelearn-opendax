@@ -1,6 +1,6 @@
 <template>
     <v-col cols="12">
-        <v-card theme="light" rounded="lg" width="100%">
+        <v-card rounded="lg" width="100%">
             <v-card-text>
                 <v-col cols="12">Settings</v-col>
                 <v-divider />

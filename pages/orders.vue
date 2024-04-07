@@ -1,6 +1,6 @@
 <template>
     <v-col cols="12">
-        <v-card rounded="lg" variant="text">
+        <v-card rounded="lg">
             <v-card-title>
                 <v-tabs v-model="events.tabs" selected-class="active-tab" hide-slider>
                     <v-tab class="text-capitalize">all</v-tab>

@@ -24,3 +24,20 @@
     background-color: #00632B;
     border-radius: 7px;
 }
+
+@media screen and ( max-width: 768px ){
+    h1, h2,h3, h4, h5, h6 , p , li, td, th, .v-chip__content{
+        font-size: 9px !important;
+    }
+    span.text-h5,
+    .v-card-title,
+    span.v-btn--size-default{
+        font-size: 16px !important;
+    }
+    .v-col-12{
+        padding: 11px !important;
+    }
+    .v-card-text {
+        padding: 5px !important;
+    }
+}
