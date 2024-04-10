@@ -10,6 +10,13 @@ export default defineNuxtConfig({
     css:[
         '~/assets/style/main.scss'
     ],
+    app:{
+        head:{
+            link:[
+                { rel: 'icon', type:'image/x-icon', href:'/favicon.png' }
+            ]
+        }
+    },
     modules: [
         (_options, nuxt) => {
         nuxt.hooks.hook('vite:extendConfig', (config) => {
