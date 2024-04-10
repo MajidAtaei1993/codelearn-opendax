@@ -18,3 +18,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_OPENDAX_D8A34 }}'
           channelId: live
           projectId: opendax-d8a34
+          local-dir: dist/
