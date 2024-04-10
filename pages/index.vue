@@ -130,9 +130,9 @@
             })
         });
         events.coins = temp
-        // setTimeout(() => {
-        //     getCoin()
-        // }, 5000);
+        setTimeout(() => {
+            getCoin()
+        }, 5000);
         events.loading = false
     }
     async function orderBooks(){
@@ -156,9 +156,9 @@
             })
         });
         events.bids = bids
-        // setTimeout(() => {
-        //     orderBooks()
-        // }, 5000);
+        setTimeout(() => {
+            orderBooks()
+        }, 5000);
         events.loading = false
     }
     async function getSymbols(){
